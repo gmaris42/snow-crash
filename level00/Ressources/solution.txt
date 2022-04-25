@@ -1,0 +1,24 @@
+hint => Find this first file who can run only as flag00 (from video of the project)
+hint => usefull site dcode.fr (from video of the project)
+```
+find / -user flag00 2>/dev/null
+
+/usr/sbin/john
+/rofs/usr/sbin/john
+```
+
+```
+cat /usr/sbin/john
+
+cdiiddwpgswtgt
+```
+
+dcode.fr says it's rot or Caesar
+rot15 give a plausible answer : nottoohardhere
+caesat give the same
+
+password for flag00 is "nottoohardhere"
+
+su flag00
+getflag
+su level01
