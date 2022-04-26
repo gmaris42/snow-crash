@@ -2,6 +2,7 @@ curl -k https://www.openwall.com/john/k/john-1.9.0-jumbo-1.tar.xz --output john.
 
 tar xJvf john.tar.xz
 
-cd john-bidul
+cd john-1.9.0-jumbo-1
+cd src
 ./configure
-make
+make -s clean && make -sj4
