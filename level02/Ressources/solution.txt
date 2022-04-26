@@ -1,0 +1,7 @@
+At home there is a .pcap file
+
+first extract it from the VM
+```
+scp -P 4242 level02@192.168.56.101:level02.pcap ./level02.pcap
+```
+d
