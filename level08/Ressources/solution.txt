@@ -7,7 +7,7 @@ Unable to open %s
 Unable to read fd %d
 ```
 
-If the file name is token it can't be open so let's crate a sym link :D
+If the file name is token it can't be open so let's create a sym link :D
 
 ```
 ln -s /home/user/level08/token /tmp/totaly_not_a_rename

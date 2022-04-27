@@ -8,7 +8,7 @@ Then we check this variable using the comand env
 LOGNAME=level07
 
 We can presume that the program just print this env variable. 
-So to exploit this weekness we just do:
+So to exploit this weakness we just do:
 
 export LOGNAME="\`getflag\`"
 
