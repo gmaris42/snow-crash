@@ -1,0 +1,15 @@
+When we do a ls, we can see there is a program called 'level07'.
+
+If we execute it, it just display: level07
+
+Using strings on it, (strings level07) we can notice it uses the getenv function to get an env variable called LOGNAME.
+Then we check this variable using the comand env
+
+LOGNAME=level07
+
+We can presume that the program just print this env variable. 
+So to exploit this weekness we just do:
+
+export LOGNAME="\`getflag\`"
+
+(\ because ` is a particular character and is needed to be executed)
