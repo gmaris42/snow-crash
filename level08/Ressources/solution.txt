@@ -1,0 +1,23 @@
+strings level08 show this important part 
+```
+%s [file to read]
+token
+You may not access '%s'
+Unable to open %s
+Unable to read fd %d
+```
+
+If the file name is token it can't be open so let's crate a sym link :D
+
+```
+ln -s /home/user/level08/token /tmp/totaly_not_a_rename
+```
+and run ./level08 /tmp/totaly_not_a_rename 
+We get the token :
+quif5eloekouj29ke0vouxean
+
+```
+su flag08
+getflag
+```
+25749xKZ8L7DkSCwJkT9dyv6f
